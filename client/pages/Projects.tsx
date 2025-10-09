@@ -3,7 +3,7 @@ import { projects } from "@/data/projects";
 export default function Projects() {
   return (
     <div className="space-y-14">
-      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] relative z-10 overflow-hidden">
+      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.06)_0%,_transparent_65%)]" />
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
@@ -29,7 +29,7 @@ export default function Projects() {
           <article
             key={project.slug}
             id={project.slug}
-            className="grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-8 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.55)] transition hover:-translate-y-[4px] hover:shadow-[9px_9px_0_0_hsl(var(--foreground)/0.6)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden"
+            className="group grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-8 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden"
           >
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.04)_0%,_transparent_70%)]" />
             <div className="space-y-5">
@@ -87,7 +87,7 @@ export default function Projects() {
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover saturate-0 transition duration-700 hover:saturate-75"
+                className="h-full w-full object-cover saturate-0 transition duration-500 group-hover:saturate-50"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-transparent" />
             </div>
