@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ArrowUp } from "lucide-react";
 
 export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,7 +59,7 @@ export function ScrollToTop() {
       aria-label="Scroll to top"
     >
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
-      <span className="font-mono text-lg font-bold">↑</span>
+      <ArrowUp size={18} className="font-bold" />
     </button>
   );
 }

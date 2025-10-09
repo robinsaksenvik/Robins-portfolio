@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { featuredProjects } from "@/data/projects";
 import { TypewriterText } from "@/components/ui/typewriter-text";
+import { FolderOpen, User, MessageSquare, ExternalLink, Github } from "lucide-react";
 
 const quickLinks = [
-  { label: "Projects", to: "/projects" },
-  { label: "About", to: "/about" },
-  { label: "Contact", to: "/find-me" },
+  { label: "Projects", to: "/projects", icon: FolderOpen },
+  { label: "About", to: "/about", icon: User },
+  { label: "Contact", to: "/find-me", icon: MessageSquare },
 ];
 
 
@@ -80,7 +81,10 @@ function QuickLinks() {
               className="pressable group flex items-center justify-between gap-4 rounded-xl border-[3px] border-foreground bg-secondary px-5 py-4 font-heading font-semibold text-sm uppercase tracking-[0.2em] relative z-10 overflow-hidden"
             >
               <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_hsl(var(--foreground)/0.06)_0%,_transparent_50%)]" />
-              {link.label}
+              <div className="flex items-center gap-2">
+                <link.icon size={16} className="opacity-70" />
+                {link.label}
+              </div>
               <span className="font-mono text-base transition-transform group-hover:translate-x-1">↗</span>
             </Link>
           </div>
@@ -110,7 +114,7 @@ function ProjectsSection() {
           return (
             <article
               key={project.slug}
-              className={`group flex h-full flex-col overflow-hidden rounded-2xl border-[3px] border-foreground bg-card shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 animate-entrance ${projectDelayClasses[index]}`}
+              className={`group flex h-full flex-col overflow-hidden rounded-2xl border-[3px] border-foreground bg-card shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[12px_12px_0_0_hsl(var(--foreground)/0.7)] relative z-10 animate-fade-in ${projectDelayClasses[index]}`}
             >
               <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_left,_hsl(var(--foreground)/0.05)_0%,_transparent_60%)]" />
               <div className="flex items-center justify-between border-b-[3px] border-foreground bg-secondary px-5 py-3 text-xs uppercase tracking-[0.3em] text-foreground/70 relative z-10">

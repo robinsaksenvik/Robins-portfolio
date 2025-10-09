@@ -1,4 +1,5 @@
 import { projects } from "@/data/projects";
+import { Github, ExternalLink } from "lucide-react";
 
 export default function Projects() {
   return (
@@ -69,6 +70,7 @@ export default function Projects() {
                     className="pressable inline-flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 font-semibold relative z-10 overflow-hidden"
                   >
                     <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/5 via-transparent to-transparent" />
+                    <Github size={14} className="opacity-70" />
                     Repo
                     <span className="font-mono text-sm">↗</span>
                   </a>
