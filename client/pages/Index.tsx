@@ -162,7 +162,7 @@ function ProfileImage() {
         className="h-96 w-96 object-cover rounded-2xl border-[3px] border-foreground saturate-0 transition-all duration-300 group-hover:saturate-50"
       />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.12)_0%,_transparent_65%)] rounded-2xl" />
-      <div className="absolute inset-0 bg-yellow-200/5 rounded-2xl transition-opacity duration-300 group-hover:opacity-0" />
+      <div className="absolute inset-0 bg-orange-200/5 rounded-2xl transition-opacity duration-300 group-hover:opacity-0" />
     </div>
   );
 }
