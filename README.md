@@ -178,7 +178,7 @@ This project is personal portfolio code. Please respect the original work and cr
 ## 👨‍💻 Author
 
 **Robin S. Karlsen**
-- Portfolio: [Your deployed URL]
+- Portfolio: https://robinsaksenvikkarlsen.netlify.app/
 - GitHub: [@robinsaksenvik](https://github.com/robinsaksenvik)
 
 ---
