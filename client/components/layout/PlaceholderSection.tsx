@@ -10,6 +10,7 @@ interface PlaceholderSectionProps {
     label: string;
     to: string;
   };
+  additionalButtons?: ReactNode;
   children?: ReactNode;
 }
 
@@ -18,6 +19,7 @@ export function PlaceholderSection({
   description,
   eyebrow = "Work in progress",
   cta,
+  additionalButtons,
   children,
 }: PlaceholderSectionProps) {
   return (
@@ -32,16 +34,19 @@ export function PlaceholderSection({
           <p className="max-w-2xl text-sm leading-relaxed text-foreground/75 md:text-base">
             {description}
           </p>
-          {cta ? (
-            <Link
-              to={cta.to}
-              className="pressable inline-flex w-fit items-center gap-3 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] relative z-10 overflow-hidden"
-            >
-              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
-              {cta.label}
-              <span className="font-mono text-sm">↗</span>
-            </Link>
-          ) : null}
+          <div className="flex flex-wrap gap-4">
+            {cta ? (
+              <Link
+                to={cta.to}
+                className="pressable inline-flex w-fit items-center gap-3 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] relative z-10 overflow-hidden"
+              >
+                <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
+                {cta.label}
+                <span className="font-mono text-sm">↗</span>
+              </Link>
+            ) : null}
+            {additionalButtons}
+          </div>
         </div>
       </div>
       {children}

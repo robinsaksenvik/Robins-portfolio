@@ -6,9 +6,39 @@ export default function About() {
     <div className="space-y-12">
       <PlaceholderSection
         eyebrow="About me"
-        title="Robin – creative coder"
-        description="I build digital experiences with a retrofuturistic twist. The goal is to create tools and scenes where creativity can flow freely – from live coding on stage to minimalist dashboards for creators."
+        title="Robin – Full-Stack Developer"
+        description="Passionate about creating meaningful digital solutions through clean code and thoughtful design. I enjoy building tools that make a difference."
         cta={{ label: "View projects", to: "/projects" }}
+        additionalButtons={
+          <>
+            <button
+              onClick={() => {
+                const element = document.getElementById('professional-timeline');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+              className="inline-flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] shadow-[3px_3px_0_0_hsl(var(--foreground)/0.6)] transition-transform duration-150 ease-out hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-none relative z-10 overflow-hidden"
+            >
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
+              Professional Timeline
+              <span className="font-mono text-xs">↓</span>
+            </button>
+            <button
+              onClick={() => {
+                const element = document.getElementById('volunteer-work');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+              className="inline-flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] shadow-[3px_3px_0_0_hsl(var(--foreground)/0.6)] transition-transform duration-150 ease-out hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-none relative z-10 overflow-hidden"
+            >
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
+              Volunteer Work
+              <span className="font-mono text-xs">↓</span>
+            </button>
+          </>
+        }
       />
 
       <section className="grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden">
@@ -46,20 +76,44 @@ export default function About() {
         </div>
       </section>
 
-      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 overflow-hidden">
+      <section id="professional-timeline" className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_center,_hsl(var(--foreground)/0.1)_0%,_transparent_60%)]" />
-        <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Timeline</h2>
+        <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Professional Timeline</h2>
         <div className="mt-6 space-y-5">
-          {timeline.map((item) => (
+          {timeline.filter(item => !item.title.includes('dotDAGENE') && !item.title.includes('Linjeforeningen Online')).map((item) => (
             <div
-              key={item.year}
-              className="flex flex-col gap-2 rounded-2xl border-[3px] border-foreground bg-background px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.45)] md:flex-row md:items-start md:justify-between relative z-10 overflow-hidden"
+              key={`${item.startDate}-${item.title}`}
+              className="flex flex-col gap-3 rounded-2xl border-[3px] border-foreground bg-background px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.45)] relative z-10 overflow-hidden"
             >
               <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_left,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
-              <span className="text-sm font-heading font-semibold uppercase tracking-[0.25em] text-foreground">
-                {item.year}
+              <span className="text-xs font-heading font-semibold uppercase tracking-[0.25em] text-foreground/70">
+                {item.startDate} – {item.endDate}
               </span>
-              <div className="max-w-xl space-y-1 text-sm text-foreground/75">
+              <div className="space-y-1 text-sm text-foreground/75">
+                <p className="font-heading font-semibold uppercase tracking-[0.2em] text-foreground">
+                  {item.title}
+                </p>
+                <p>{item.detail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="volunteer-work" className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_center,_hsl(var(--foreground)/0.1)_0%,_transparent_60%)]" />
+        <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Volunteer Work</h2>
+        <div className="mt-6 space-y-5">
+          {timeline.filter(item => item.title.includes('dotDAGENE') || item.title.includes('Linjeforeningen Online')).map((item) => (
+            <div
+              key={`${item.startDate}-${item.title}`}
+              className="flex flex-col gap-3 rounded-2xl border-[3px] border-foreground bg-background px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.45)] relative z-10 overflow-hidden"
+            >
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_left,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
+              <span className="text-xs font-heading font-semibold uppercase tracking-[0.25em] text-foreground/70">
+                {item.startDate} – {item.endDate}
+              </span>
+              <div className="space-y-1 text-sm text-foreground/75">
                 <p className="font-heading font-semibold uppercase tracking-[0.2em] text-foreground">
                   {item.title}
                 </p>

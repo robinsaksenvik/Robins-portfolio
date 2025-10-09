@@ -1,5 +1,6 @@
 export type TimelineItem = {
-  year: string;
+  startDate: string;
+  endDate: string;
   title: string;
   detail: string;
 };
@@ -16,41 +17,72 @@ export type Skill = {
 
 export const timeline: TimelineItem[] = [
   {
-    year: "2024",
-    title: "Full-time gooner",
+    startDate: "Aug 2025",
+    endDate: "Present",
+    title: "Project Coordinator – dotDAGENE",
     detail:
-      "Working with experimental code experiences for creative studios and performing artists. Focus on interactive installations and live performances.",
+      "Contributing to establishing dotDAGENE as a meeting place between students and industry. Working with concept development, organization and business collaboration.",
   },
   {
-    year: "2022",
-    title: "Launched retro portfolio",
+    startDate: "Aug 2024",
+    endDate: "Present",
+    title: "Sports Manager – Linjeforeningen Online (NTNU)",
     detail:
-      "Built the first version of this portfolio with the goal of combining nostalgia with modern web technology.",
+      "Responsible for sports events for several hundred computer science students at NTNU.",
   },
   {
-    year: "2020",
-    title: "Started Mac Codes",
+    startDate: "Aug 2024",
+    endDate: "Jun 2026",
+    title: "Bachelor in Computer Science – NTNU",
     detail:
-      "Published tutorials and streams about creative code systems. Quickly became a gathering point for retro UI enthusiasts.",
+      "Currently pursuing Bachelor's degree in Computer Science at Norwegian University of Science and Technology (NTNU). Expected graduation June 2026.",
+  },
+  {
+    startDate: "Sep 2023",
+    endDate: "Nov 2024",
+    title: "Content Producer – NTNU",
+    detail:
+      "Part-time role producing and adapting content for communication and information sharing at the university.",
+  },
+  {
+    startDate: "Aug 2022",
+    endDate: "Jun 2023",
+    title: "Economics & Administration – Nord University",
+    detail:
+      "Completed one-year study program in Economics and Administration.",
+  },
+  {
+    startDate: "Aug 2022",
+    endDate: "Aug 2023",
+    title: "Field Sales Representative – Sector Alarm Norge",
+    detail:
+      "Full-time position responsible for prospective sales and customer follow-up in Bodø.",
+  },
+  {
+    startDate: "Aug 2021",
+    endDate: "Jul 2022",
+    title: "Border Guard – Norwegian Armed Forces",
+    detail:
+      "Served as border guard at Garnisonen i Sør-Varanger, protecting Norway's border with Russia during the ongoing conflict. Completed Basic Medic Level 3 certification.",
   },
 ];
 
 export const values: Value[] = [
   {
-    id: "experimental-design",
-    label: "Experimental design"
+    id: "creative-innovation",
+    label: "Creative innovation"
   },
   {
     id: "user-focus", 
     label: "User focus"
   },
   {
-    id: "open-source",
-    label: "Open source"
+    id: "collaborative-mindset",
+    label: "Collaborative mindset"
   },
   {
-    id: "performing-arts",
-    label: "Performing arts"
+    id: "initiative-driven",
+    label: "Initiative driven"
   }
 ];
 
@@ -60,23 +92,31 @@ export const skills: Skill[] = [
     name: "React & TypeScript"
   },
   {
-    id: "creative-coding",
-    name: "Creative coding"
+    id: "ui-ux-design",
+    name: "UI/UX Design"
   },
   {
-    id: "webgl-threejs",
-    name: "WebGL & Three.js"
+    id: "python",
+    name: "Python"
   },
   {
-    id: "realtime-ux",
-    name: "Realtime UX"
+    id: "java",
+    name: "Java"
   },
   {
-    id: "design-systems", 
-    name: "Design systems"
+    id: "javascript-css-html", 
+    name: "Javascript, CSS & HTML"
   },
   {
-    id: "audio-visual-sync",
-    name: "Audio/visual sync"
-  }
+    id: "user-engagement",
+    name: "User engagement & retention"
+  },
+  {
+    id: "sales-marketing",
+    name: "Sales & Marketing"
+  },
+  {
+    id: "vibe-coding",
+    name: "Vibe coding"
+  },
 ];

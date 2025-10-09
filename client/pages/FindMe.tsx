@@ -9,7 +9,7 @@ const platforms = [
   {
     name: "LinkedIn",
     handle: "Robin S. Karlsen",
-    url: "www.linkedin.com/in/robinsaksenvikkarlsen",
+    url: "https://www.linkedin.com/in/robinsaksenvikkarlsen",
   },
   {
     name: "Email",
@@ -22,7 +22,7 @@ export default function FindMe() {
   return (
     <PlaceholderSection
       title="Find me online"
-      description="I share work-in-progress, tutorials and livestreams on several platforms. Follow the journey and say hello if you want to collaborate."
+      description="Connect with me on social platforms or reach out directly. I'm always open to discussing new opportunities and collaborations."
     >
       <div className="grid gap-4 md:grid-cols-3">
         {platforms.map((platform) => (
