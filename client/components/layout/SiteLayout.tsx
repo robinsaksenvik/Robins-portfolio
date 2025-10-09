@@ -34,7 +34,7 @@ export function SiteLayout() {
 
 function SiteHeader() {
   return (
-    <header className="border-b border-border/70 bg-secondary relative z-20">
+    <header className="border-b-[3px] border-foreground bg-secondary relative z-20">
       <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between px-6 py-4 md:px-10">
         <a
           href="/"
@@ -50,7 +50,7 @@ function SiteHeader() {
               to={to}
               className={({ isActive }) =>
                 cn(
-                  "relative flex items-center gap-2 rounded-md border border-foreground/30 px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-150 ease-out",
+                  "relative flex items-center gap-2 rounded-md border-[3px] border-foreground px-4 py-2 text-sm font-semibold uppercase tracking-[0.18em] transition-all duration-150 ease-out",
                   isActive 
                     ? "translate-x-[2px] translate-y-[2px] bg-foreground/10 text-foreground shadow-none" 
                     : "bg-secondary shadow-[3px_3px_0_0_hsl(var(--foreground)/0.6)] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:bg-foreground/10 active:shadow-none"
@@ -69,7 +69,7 @@ function SiteHeader() {
 
 function SiteFooter() {
   return (
-    <footer className="border-t border-border/70 bg-secondary relative z-20">
+    <footer className="border-t-[3px] border-foreground bg-secondary relative z-20">
       <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-3 px-6 py-6 text-xs uppercase tracking-[0.2em] text-foreground/80 md:flex-row md:items-center md:justify-between md:px-10">
         <span>© {new Date().getFullYear()} Robin's Portfolio</span>
         <span className="flex items-center gap-2">

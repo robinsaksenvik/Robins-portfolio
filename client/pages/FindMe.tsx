@@ -31,7 +31,7 @@ export default function FindMe() {
             href={platform.url}
             target="_blank"
             rel="noreferrer"
-            className="pressable flex flex-col gap-3 rounded-2xl border border-foreground/30 bg-background px-6 py-5 text-sm uppercase tracking-[0.25em] text-foreground/80 relative z-10"
+            className="pressable flex flex-col gap-3 rounded-2xl border-[3px] border-foreground bg-background px-6 py-5 text-sm uppercase tracking-[0.25em] text-foreground/80 relative z-10"
           >
             <span className="text-xs text-foreground/60">{platform.name}</span>
             <span className="text-lg font-heading">{platform.handle}</span>
