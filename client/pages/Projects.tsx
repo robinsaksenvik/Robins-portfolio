@@ -3,10 +3,10 @@ import { projects } from "@/data/projects";
 export default function Projects() {
   return (
     <div className="space-y-14">
-      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 overflow-hidden">
+      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 overflow-hidden animate-entrance">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.06)_0%,_transparent_65%)]" />
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-2xl space-y-4">
+          <div className="max-w-2xl space-y-4 animate-slide-up delay-100">
             
             <h1 className="text-3xl font-heading font-bold uppercase tracking-[0.3em] md:text-4xl">
               A selection of projects
@@ -15,20 +15,22 @@ export default function Projects() {
               This collection showcases various projects that demonstrate creative thinking and problem-solving. Each project reflects a focus on thoughtful solutions and meaningful outcomes.
             </p>
           </div>
-          <div className="rounded-2xl border-[3px] border-foreground bg-background px-6 py-4 text-xs uppercase tracking-[0.3em] text-foreground/70 shadow-[4px_4px_0_0_hsl(var(--foreground)/0.5)] relative z-10 overflow-hidden">
+          <div className="rounded-2xl border-[3px] border-foreground bg-background px-6 py-4 text-xs uppercase tracking-[0.3em] text-foreground/70 shadow-[4px_4px_0_0_hsl(var(--foreground)/0.5)] relative z-10 overflow-hidden animate-scale-in delay-200">
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_hsl(var(--foreground)/0.03)_0%,_transparent_65%)]" />
             <p>Available for commisions – get in touch via <a href="mailto:mac@retro.codes" className="underline">robin.sk@hotmail.no</a></p>
           </div>
         </div>
       </section>
 
-      <section className="space-y-10">
-        {projects.map((project) => (
-          <article
-            key={project.slug}
-            id={project.slug}
-            className="group grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-8 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden"
-          >
+      <section className="space-y-10 animate-slide-up delay-300">
+        {projects.map((project, index) => {
+          const projectDelayClasses = ['delay-400', 'delay-500', 'delay-600', 'delay-700', 'delay-800'];
+          return (
+            <article
+              key={project.slug}
+              id={project.slug}
+              className={`group grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-8 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden animate-entrance ${projectDelayClasses[index % projectDelayClasses.length]}`}
+            >
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.12)_0%,_transparent_60%)]" />
             <div className="space-y-5">
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/80">
@@ -45,17 +47,20 @@ export default function Projects() {
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/80">
-                {project.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="rounded-lg border-[3px] border-foreground bg-secondary px-3 py-1 shadow-[2px_2px_0_0_hsl(var(--foreground)/0.4)] relative z-10 overflow-hidden"
-                  >
-                    <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/5 via-transparent to-transparent" />
-                    {tech}
-                  </span>
-                ))}
+                {project.stack.map((tech, techIndex) => {
+                  const techDelayClasses = ['delay-100', 'delay-200', 'delay-300', 'delay-400'];
+                  return (
+                    <span
+                      key={tech}
+                      className={`rounded-lg border-[3px] border-foreground bg-secondary px-3 py-1 shadow-[2px_2px_0_0_hsl(var(--foreground)/0.4)] relative z-10 overflow-hidden animate-scale-in ${techDelayClasses[techIndex % techDelayClasses.length]}`}
+                    >
+                      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/5 via-transparent to-transparent" />
+                      {tech}
+                    </span>
+                  );
+                })}
               </div>
-              <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em]">
+              <div className="flex flex-wrap gap-4 text-xs uppercase tracking-[0.3em] animate-fade-in delay-300">
                 {project.repoUrl ? (
                   <a
                     href={project.repoUrl}
@@ -90,7 +95,8 @@ export default function Projects() {
               <div className="absolute inset-0 bg-gradient-to-tr from-background/30 via-transparent to-transparent" />
             </div>
           </article>
-        ))}
+          );
+        })}
       </section>
     </div>
   );

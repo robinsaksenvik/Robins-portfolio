@@ -70,7 +70,7 @@ function SiteHeader() {
           
           Robin's Portfolio
         </a>
-        <nav className="flex flex-wrap items-center justify-end gap-2">
+        <nav className="flex flex-wrap items-center justify-end gap-3">
           {navItems.map(({ to, label }) => (
             <NavLink
               key={to}
