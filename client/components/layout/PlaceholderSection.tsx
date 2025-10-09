@@ -22,7 +22,8 @@ export function PlaceholderSection({
 }: PlaceholderSectionProps) {
   return (
     <div className="space-y-8">
-      <div className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] relative z-10">
+      <div className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] relative z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.06)_0%,_transparent_55%)]" />
         <div className="space-y-6">
           <span className="inline-flex items-center gap-2 rounded-full border-[3px] border-foreground bg-background px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-foreground/60 relative z-10">
             {eyebrow}
@@ -34,8 +35,9 @@ export function PlaceholderSection({
           {cta ? (
             <Link
               to={cta.to}
-              className="pressable inline-flex w-fit items-center gap-3 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] relative z-10"
+              className="pressable inline-flex w-fit items-center gap-3 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] relative z-10 overflow-hidden"
             >
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
               {cta.label}
               <span className="font-mono text-sm">↗</span>
             </Link>

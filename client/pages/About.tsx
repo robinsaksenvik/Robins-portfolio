@@ -40,23 +40,28 @@ export default function About() {
         cta={{ label: "View projects", to: "/projects" }}
       />
 
-      <section className="grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.55)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10">
+      <section className="grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.55)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_right,_hsl(var(--foreground)/0.05)_0%,_transparent_65%)]" />
         <div className="space-y-6">
           <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Values</h2>
           <p className="text-sm leading-relaxed text-foreground/75 md:text-base">
             I believe in playful collaboration, clear frameworks and small details that make people smile. Every line of code should feel at home in a classic machine, yet delivered with modern performance and accessibility.
           </p>
           <div className="grid gap-3 text-sm uppercase tracking-[0.25em] text-foreground/70 md:grid-cols-2">
-            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)]">
+            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative overflow-hidden">
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
               Experimental design
             </div>
-            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)]">
+            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative overflow-hidden">
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
               User focus
             </div>
-            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)]">
+            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative overflow-hidden">
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
               Open source
             </div>
-            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)]">
+            <div className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative overflow-hidden">
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
               Performing arts
             </div>
           </div>
@@ -67,8 +72,9 @@ export default function About() {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-lg border-[3px] border-foreground bg-background px-4 py-2 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative z-10"
+                className="rounded-lg border-[3px] border-foreground bg-background px-4 py-2 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative z-10 overflow-hidden"
               >
+                <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
                 {skill}
               </span>
             ))}
@@ -76,14 +82,16 @@ export default function About() {
         </div>
       </section>
 
-      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.5)] relative z-10">
+      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.5)] relative z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_center,_hsl(var(--foreground)/0.04)_0%,_transparent_60%)]" />
         <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Timeline</h2>
         <div className="mt-6 space-y-5">
           {timeline.map((item) => (
             <div
               key={item.year}
-              className="flex flex-col gap-2 rounded-2xl border-[3px] border-foreground bg-background px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.45)] md:flex-row md:items-start md:justify-between relative z-10"
+              className="flex flex-col gap-2 rounded-2xl border-[3px] border-foreground bg-background px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.45)] md:flex-row md:items-start md:justify-between relative z-10 overflow-hidden"
             >
+              <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_left,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
               <span className="text-sm font-heading font-semibold uppercase tracking-[0.25em] text-foreground">
                 {item.year}
               </span>

@@ -31,8 +31,9 @@ export default function FindMe() {
             href={platform.url}
             target="_blank"
             rel="noreferrer"
-            className="pressable flex flex-col gap-3 rounded-2xl border-[3px] border-foreground bg-background px-6 py-5 text-sm uppercase tracking-[0.25em] text-foreground/80 relative z-10"
+            className="pressable flex flex-col gap-3 rounded-2xl border-[3px] border-foreground bg-background px-6 py-5 text-sm uppercase tracking-[0.25em] text-foreground/80 relative z-10 overflow-hidden"
           >
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_70%)]" />
             <span className="text-xs text-foreground/60">{platform.name}</span>
             <span className="text-lg font-heading">{platform.handle}</span>
             <span className="font-mono text-xs">Visit ↗</span>

@@ -3,7 +3,8 @@ import { projects } from "@/data/projects";
 export default function Projects() {
   return (
     <div className="space-y-14">
-      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] relative z-10">
+      <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] relative z-10 overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.06)_0%,_transparent_65%)]" />
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
             <span className="inline-flex items-center gap-2 rounded-full border-[3px] border-foreground bg-background px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-foreground/60 relative z-10">
@@ -16,7 +17,8 @@ export default function Projects() {
               The portfolio showcases experiments in creative code systems, live coding and product design. Each project is built with focus on retro aesthetics and modern web technology.
             </p>
           </div>
-          <div className="rounded-2xl border-[3px] border-foreground bg-background px-6 py-4 text-xs uppercase tracking-[0.3em] text-foreground/70 shadow-[4px_4px_0_0_hsl(var(--foreground)/0.5)] relative z-10">
+          <div className="rounded-2xl border-[3px] border-foreground bg-background px-6 py-4 text-xs uppercase tracking-[0.3em] text-foreground/70 shadow-[4px_4px_0_0_hsl(var(--foreground)/0.5)] relative z-10 overflow-hidden">
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_hsl(var(--foreground)/0.03)_0%,_transparent_65%)]" />
             <p>Available for commisions – get in touch via <a href="mailto:mac@retro.codes" className="underline">robin.sk@hotmail.no</a></p>
           </div>
         </div>
@@ -27,15 +29,13 @@ export default function Projects() {
           <article
             key={project.slug}
             id={project.slug}
-            className="grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-8 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.55)] transition hover:-translate-y-[4px] hover:shadow-[9px_9px_0_0_hsl(var(--foreground)/0.6)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10"
+            className="grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-8 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.55)] transition hover:-translate-y-[4px] hover:shadow-[9px_9px_0_0_hsl(var(--foreground)/0.6)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden"
           >
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.04)_0%,_transparent_70%)]" />
             <div className="space-y-5">
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/60">
                 <span className="rounded-md border-[3px] border-foreground bg-secondary px-3 py-1 font-mono text-[0.65rem] relative z-10">
                   {project.date}
-                </span>
-                <span className="rounded-md border-[3px] border-foreground bg-secondary px-3 py-1 relative z-10">
-                  {project.headline}
                 </span>
               </div>
               <div className="space-y-3">
@@ -50,8 +50,9 @@ export default function Projects() {
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="rounded-lg border-[3px] border-foreground bg-secondary px-3 py-1 shadow-[2px_2px_0_0_hsl(var(--foreground)/0.4)] relative z-10"
+                    className="rounded-lg border-[3px] border-foreground bg-secondary px-3 py-1 shadow-[2px_2px_0_0_hsl(var(--foreground)/0.4)] relative z-10 overflow-hidden"
                   >
+                    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
                     {tech}
                   </span>
                 ))}
@@ -62,8 +63,9 @@ export default function Projects() {
                     href={project.repoUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="pressable inline-flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 font-semibold relative z-10"
+                    className="pressable inline-flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 font-semibold relative z-10 overflow-hidden"
                   >
+                    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
                     Repo
                     <span className="font-mono text-sm">↗</span>
                   </a>

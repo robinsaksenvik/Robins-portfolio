@@ -58,8 +58,9 @@ function QuickLinks() {
           <Link
             key={link.label}
             to={link.to}
-            className="pressable group flex items-center justify-between gap-4 rounded-xl border-[3px] border-foreground bg-secondary px-5 py-4 font-heading font-semibold text-sm uppercase tracking-[0.2em] relative z-10"
+            className="pressable group flex items-center justify-between gap-4 rounded-xl border-[3px] border-foreground bg-secondary px-5 py-4 font-heading font-semibold text-sm uppercase tracking-[0.2em] relative z-10 overflow-hidden"
           >
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_hsl(var(--foreground)/0.06)_0%,_transparent_50%)]" />
             {link.label}
             <span className="font-mono text-base transition-transform group-hover:translate-x-1">↗</span>
           </Link>
@@ -76,8 +77,9 @@ function ProjectsSection() {
         <h2 className="text-3xl font-heading font-bold uppercase tracking-[0.25em]">Projects</h2>
         <Link
           to="/projects"
-          className="pressable relative flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-sm font-medium uppercase tracking-[0.18em]"
+          className="pressable relative flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-sm font-medium uppercase tracking-[0.18em] overflow-hidden"
         >
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
           View all projects
           <span className="font-mono text-sm">→</span>
         </Link>
@@ -88,6 +90,7 @@ function ProjectsSection() {
             key={project.slug}
             className="group flex h-full flex-col overflow-hidden rounded-2xl border-[3px] border-foreground bg-card shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10"
           >
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_left,_hsl(var(--foreground)/0.05)_0%,_transparent_60%)]" />
             <div className="flex items-center justify-between border-b-[3px] border-foreground bg-secondary px-5 py-3 text-xs uppercase tracking-[0.3em] text-foreground/70 relative z-10">
               <span className="font-mono text-[0.65rem]">{project.date}</span>
               <div className="flex items-center gap-1">
@@ -113,8 +116,9 @@ function ProjectsSection() {
               </div>
               <Link
                 to={`/projects#${project.slug}`}
-                className="mt-auto inline-flex w-fit items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] shadow-[3px_3px_0_0_hsl(var(--foreground)/0.6)] transition-transform duration-150 ease-out hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                className="mt-auto inline-flex w-fit items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em] shadow-[3px_3px_0_0_hsl(var(--foreground)/0.6)] transition-transform duration-150 ease-out hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none active:translate-x-[2px] active:translate-y-[2px] active:shadow-none overflow-hidden"
               >
+                <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
                 View project
                 <span className="font-mono text-sm">→</span>
               </Link>

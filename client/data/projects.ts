@@ -3,7 +3,6 @@ export type Project = {
   title: string;
   date: string;
   summary: string;
-  headline: string;
   image: string;
   description: string;
   stack: string[];
@@ -18,7 +17,6 @@ export const projects: Project[] = [
     date: "2024-10-08",
     summary:
       "A retro-inspired dashboard for creators. Focus on micro-interactions and keyboard shortcuts.",
-    headline: "Meet Possimus",
     image:
       "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80",
     description:
@@ -32,7 +30,6 @@ export const projects: Project[] = [
     date: "2024-07-14",
     summary:
       "Live coding platform that synchronizes light, sound and visuals via WebMIDI.",
-    headline: "Live code in sync",
     image:
       "https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=1000&q=80",
     description:
@@ -47,7 +44,6 @@ export const projects: Project[] = [
     date: "2024-02-24",
     summary:
       "Experimental browser IDE with offline support and focus mode.",
-    headline: "Nexus: an IDE for focus",
     image:
       "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=1000&q=80",
     description:
