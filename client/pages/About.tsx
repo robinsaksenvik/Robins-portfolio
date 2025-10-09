@@ -12,7 +12,7 @@ export default function About() {
       />
 
       <section className="grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_right,_hsl(var(--foreground)/0.05)_0%,_transparent_65%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_bottom_right,_hsl(var(--foreground)/0.12)_0%,_transparent_60%)]" />
         <div className="space-y-6">
           <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Values</h2>
           <p className="text-sm leading-relaxed text-foreground/75 md:text-base">
@@ -24,7 +24,7 @@ export default function About() {
                 key={value.id}
                 className="rounded-2xl border-[3px] border-foreground bg-secondary px-5 py-4 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative overflow-hidden"
               >
-                <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/5 via-transparent to-transparent" />
                 {value.label}
               </div>
             ))}
@@ -38,7 +38,7 @@ export default function About() {
                 key={skill.id}
                 className="rounded-lg border-[3px] border-foreground bg-background px-4 py-2 shadow-[3px_3px_0_0_hsl(var(--foreground)/0.4)] relative z-10 overflow-hidden"
               >
-                <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
+                <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/5 via-transparent to-transparent" />
                 {skill.name}
               </span>
             ))}
@@ -47,7 +47,7 @@ export default function About() {
       </section>
 
       <section className="rounded-3xl border-[3px] border-foreground bg-secondary p-10 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] relative z-10 overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_center,_hsl(var(--foreground)/0.04)_0%,_transparent_60%)]" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_center,_hsl(var(--foreground)/0.1)_0%,_transparent_60%)]" />
         <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Timeline</h2>
         <div className="mt-6 space-y-5">
           {timeline.map((item) => (

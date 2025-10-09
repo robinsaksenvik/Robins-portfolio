@@ -59,7 +59,7 @@ export function SiteLayout() {
 function SiteHeader() {
   return (
     <header className="border-b-[3px] border-foreground bg-secondary relative z-20 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_center,_hsl(var(--foreground)/0.08)_0%,_transparent_60%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,_hsl(var(--foreground)/0.08)_0%,_transparent_50%,_hsl(var(--foreground)/0.06)_100%)]" />
       <div className="mx-auto flex w-full max-w-[1100px] items-center justify-between px-6 py-4 md:px-10">
         <a
           href="/"
@@ -96,7 +96,7 @@ function SiteHeader() {
 function SiteFooter() {
   return (
     <footer className="border-t-[3px] border-foreground bg-secondary relative z-20 overflow-hidden">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_bottom_center,_hsl(var(--foreground)/0.08)_0%,_transparent_60%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,_hsl(var(--foreground)/0.06)_0%,_transparent_50%,_hsl(var(--foreground)/0.08)_100%)]" />
       <div className="mx-auto flex w-full max-w-[1100px] flex-col gap-3 px-6 py-6 text-xs uppercase tracking-[0.2em] text-foreground/80 md:flex-row md:items-center md:justify-between md:px-10">
         <span>© {new Date().getFullYear()} Robin's Portfolio</span>
         <span className="flex items-center gap-2">

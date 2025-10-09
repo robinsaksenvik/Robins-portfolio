@@ -31,7 +31,7 @@ export default function Projects() {
             id={project.slug}
             className="group grid gap-8 rounded-3xl border-[3px] border-foreground bg-card p-8 shadow-[6px_6px_0_0_hsl(var(--foreground)/0.6)] transition hover:-translate-y-1.5 hover:shadow-[10px_10px_0_0_hsl(var(--foreground)/0.7)] md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] relative z-10 overflow-hidden"
           >
-            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.04)_0%,_transparent_70%)]" />
+            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.12)_0%,_transparent_60%)]" />
             <div className="space-y-5">
               <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/60">
                 <span className="rounded-md border-[3px] border-foreground bg-secondary px-3 py-1 font-mono text-[0.65rem] relative z-10">
@@ -52,7 +52,7 @@ export default function Projects() {
                     key={tech}
                     className="rounded-lg border-[3px] border-foreground bg-secondary px-3 py-1 shadow-[2px_2px_0_0_hsl(var(--foreground)/0.4)] relative z-10 overflow-hidden"
                   >
-                    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.02)_0%,_transparent_70%)]" />
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/5 via-transparent to-transparent" />
                     {tech}
                   </span>
                 ))}
@@ -65,7 +65,7 @@ export default function Projects() {
                     rel="noreferrer"
                     className="pressable inline-flex items-center gap-2 rounded-md border-[3px] border-foreground bg-background px-4 py-2 font-semibold relative z-10 overflow-hidden"
                   >
-                    <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.03)_0%,_transparent_60%)]" />
+                    <div className="absolute inset-0 -z-10 bg-gradient-to-br from-foreground/5 via-transparent to-transparent" />
                     Repo
                     <span className="font-mono text-sm">↗</span>
                   </a>
