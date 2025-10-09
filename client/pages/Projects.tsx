@@ -7,14 +7,12 @@ export default function Projects() {
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,_hsl(var(--foreground)/0.06)_0%,_transparent_65%)]" />
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl space-y-4">
-            <span className="inline-flex items-center gap-2 rounded-full border-[3px] border-foreground bg-background px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-foreground/60 relative z-10">
-              Project collection
-            </span>
+            
             <h1 className="text-3xl font-heading font-bold uppercase tracking-[0.3em] md:text-4xl">
-              A selection of code projects
+              A selection of projects
             </h1>
             <p className="text-sm leading-relaxed text-foreground/75 md:text-base">
-              The portfolio showcases experiments in creative code systems, live coding and product design. Each project is built with focus on retro aesthetics and modern web technology.
+              This collection showcases various projects that demonstrate creative thinking and problem-solving. Each project reflects a focus on thoughtful solutions and meaningful outcomes.
             </p>
           </div>
           <div className="rounded-2xl border-[3px] border-foreground bg-background px-6 py-4 text-xs uppercase tracking-[0.3em] text-foreground/70 shadow-[4px_4px_0_0_hsl(var(--foreground)/0.5)] relative z-10 overflow-hidden">
@@ -33,7 +31,7 @@ export default function Projects() {
           >
             <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.12)_0%,_transparent_60%)]" />
             <div className="space-y-5">
-              <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/60">
+              <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/80">
                 <span className="rounded-md border-[3px] border-foreground bg-secondary px-3 py-1 font-mono text-[0.65rem] relative z-10">
                   {project.date}
                 </span>
@@ -46,7 +44,7 @@ export default function Projects() {
                   {project.description}
                 </p>
               </div>
-              <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/60">
+              <div className="flex flex-wrap items-center gap-3 text-xs uppercase tracking-[0.3em] text-foreground/80">
                 {project.stack.map((tech) => (
                   <span
                     key={tech}

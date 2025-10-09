@@ -5,8 +5,8 @@ export default function About() {
   return (
     <div className="space-y-12">
       <PlaceholderSection
-        eyebrow="About me"
-        title="Robin – Full-Stack Developer"
+        eyebrow=""
+        title="Robin – Software Developer"
         description="Passionate about creating meaningful digital solutions through clean code and thoughtful design. I enjoy building tools that make a difference."
         cta={{ label: "View projects", to: "/projects" }}
         additionalButtons={
@@ -46,7 +46,7 @@ export default function About() {
         <div className="space-y-6">
           <h2 className="text-2xl font-heading font-bold uppercase tracking-[0.25em]">Values</h2>
           <p className="text-sm leading-relaxed text-foreground/75 md:text-base">
-            I believe in playful collaboration, clear frameworks and small details that make people smile. Every line of code should feel at home in a classic machine, yet delivered with modern performance and accessibility.
+            I focus on building solutions that truly make a difference through creative  thinking and innovation. Every project is an opportunity to drive positive change with user-focused design.
           </p>
           <div className="grid gap-3 text-sm uppercase tracking-[0.25em] text-foreground/70 md:grid-cols-2">
             {values.map((value) => (

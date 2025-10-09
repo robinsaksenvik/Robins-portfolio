@@ -21,6 +21,7 @@ const platforms = [
 export default function FindMe() {
   return (
     <PlaceholderSection
+      eyebrow=""
       title="Find me online"
       description="Connect with me on social platforms or reach out directly. I'm always open to discussing new opportunities and collaborations."
     >

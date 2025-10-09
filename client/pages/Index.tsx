@@ -25,15 +25,14 @@ function HeroSection() {
       <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-xl space-y-6">
           <span className="inline-flex items-center gap-2 rounded-full border-[3px] border-foreground bg-background px-4 py-1 text-xs font-medium uppercase tracking-[0.3em] text-foreground/70 relative z-10">
-            Retro maker
+            Software developer
           </span>
           <h1 className="text-4xl font-heading font-bold uppercase leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
             Hello.
             <br />I'm Robin.
           </h1>
           <p className="max-w-xl text-base leading-relaxed text-foreground/80 sm:text-lg">
-            I build experimental code experiences with retro aesthetics and modern technology. The portfolio gathers
-            handpicked projects, learning notes and resources for creators.
+            I create digital experiences through creative innovation and user-focused design. Driven by initiative and collaborative thinking to build meaningful connections between people and technology.
           </p>
           <div className="flex flex-wrap items-center gap-3 text-sm font-semibold uppercase tracking-[0.3em] text-foreground/70">
             <span>

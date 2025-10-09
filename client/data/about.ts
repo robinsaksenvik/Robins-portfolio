@@ -15,21 +15,7 @@ export type Skill = {
   name: string;
 };
 
-export const timeline: TimelineItem[] = [
-  {
-    startDate: "Aug 2025",
-    endDate: "Present",
-    title: "Project Coordinator – dotDAGENE",
-    detail:
-      "Contributing to establishing dotDAGENE as a meeting place between students and industry. Working with concept development, organization and business collaboration.",
-  },
-  {
-    startDate: "Aug 2024",
-    endDate: "Present",
-    title: "Sports Manager – Linjeforeningen Online (NTNU)",
-    detail:
-      "Responsible for sports events for several hundred computer science students at NTNU.",
-  },
+export const professionalTimeline: TimelineItem[] = [
   {
     startDate: "Aug 2024",
     endDate: "Jun 2026",
@@ -66,6 +52,26 @@ export const timeline: TimelineItem[] = [
       "Served as border guard at Garnisonen i Sør-Varanger, protecting Norway's border with Russia during the ongoing conflict. Completed Basic Medic Level 3 certification.",
   },
 ];
+
+export const volunteerTimeline: TimelineItem[] = [
+  {
+    startDate: "Aug 2025",
+    endDate: "Present",
+    title: "Project Coordinator – dotDAGENE",
+    detail:
+      "Contributing to establishing dotDAGENE as a meeting place between students and industry. Working with concept development, organization and business collaboration.",
+  },
+  {
+    startDate: "Aug 2024",
+    endDate: "Present",
+    title: "Sports event organizer – Linjeforeningen Online (NTNU)",
+    detail:
+      "Responsible for sports events for several hundred computer science students at NTNU.",
+  },
+];
+
+// Legacy export for backward compatibility
+export const timeline: TimelineItem[] = [...professionalTimeline, ...volunteerTimeline];
 
 export const values: Value[] = [
   {

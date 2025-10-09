@@ -1,6 +1,7 @@
 import { NavLink, Outlet, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { useEffect } from "react";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
 const navItems = [
   { to: "/projects", label: "Projects" },
@@ -52,6 +53,7 @@ export function SiteLayout() {
         <Outlet />
       </main>
       <SiteFooter />
+      <ScrollToTop />
     </div>
   );
 }
