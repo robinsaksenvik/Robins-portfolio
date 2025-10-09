@@ -24,9 +24,7 @@ function HeroSection() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_hsl(var(--foreground)/0.08)_0%,_transparent_55%)]" />
       <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:justify-between">
         <div className="max-w-xl space-y-6">
-          <span className="inline-flex items-center gap-2 rounded-full border-[3px] border-foreground bg-background px-4 py-1 text-xs font-medium uppercase tracking-[0.3em] text-foreground/70 relative z-10">
-            Software developer
-          </span>
+          
           <h1 className="text-4xl font-heading font-bold uppercase leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl">
             Hello.
             <br />I'm Robin.
