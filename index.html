@@ -4,8 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robin's portfolio</title>
-    <script type="module" crossorigin src="/assets/index-DzasNPG8.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BQtExVI_.css">
+    <script>
+      // GitHub Pages SPA redirect workaround - restore the path from 404.html redirect
+      (function() {
+        var redirect = sessionStorage.getItem('redirect');
+        sessionStorage.removeItem('redirect');
+        if (redirect && redirect !== location.pathname) {
+          history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/Robins-portfolio/assets/index-DzasNPG8.js"></script>
+    <link rel="stylesheet" crossorigin href="/Robins-portfolio/assets/index-BQtExVI_.css">
   </head>
 
   <body>
