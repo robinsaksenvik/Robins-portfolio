@@ -5,10 +5,13 @@
     <title>Robin's portfolio</title>
     <script>
       // GitHub Pages SPA redirect workaround
-      // Store the path and redirect to index.html
-      var pathSegments = location.pathname.split('/').slice(0, 2);
-      sessionStorage.setItem('redirect', location.pathname.slice(pathSegments.join('/').length) + location.search);
-      location.replace(location.origin + pathSegments.join('/') + '/index.html' + location.search);
+      // Store the path after the repo name and redirect to index.html
+      var segments = location.pathname.split('/').filter(Boolean);
+      var repo = segments[0]; // 'Robins-portfolio'
+      var path = '/' + segments.slice(1).join('/');
+      
+      sessionStorage.setItem('redirect', path + location.search + location.hash);
+      location.replace('/' + repo + '/');
     </script>
   </head>
   <body>
