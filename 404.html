@@ -5,9 +5,10 @@
     <title>Robin's portfolio</title>
     <script>
       // GitHub Pages SPA redirect workaround
-      // Store the path and redirect to index.html with the path as a query parameter
-      sessionStorage.setItem('redirect', location.pathname + location.search);
-      location.replace(location.origin + location.pathname.split('/').slice(0, -1).join('/') + '/index.html' + location.search);
+      // Store the path and redirect to index.html
+      var pathSegments = location.pathname.split('/').slice(0, 2);
+      sessionStorage.setItem('redirect', location.pathname.slice(pathSegments.join('/').length) + location.search);
+      location.replace(location.origin + pathSegments.join('/') + '/index.html' + location.search);
     </script>
   </head>
   <body>
