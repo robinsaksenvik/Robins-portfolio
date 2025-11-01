@@ -16,10 +16,7 @@ export default function Projects() {
               This collection showcases various projects that demonstrate creative thinking and problem-solving. Each project reflects a focus on thoughtful solutions and meaningful outcomes.
             </p>
           </div>
-          <div className="rounded-2xl border-[3px] border-foreground bg-background px-6 py-4 text-xs uppercase tracking-[0.3em] text-foreground/70 shadow-[4px_4px_0_0_hsl(var(--foreground)/0.5)] relative z-10 overflow-hidden animate-scale-in delay-200">
-            <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_hsl(var(--foreground)/0.03)_0%,_transparent_65%)]" />
-            <p>Available for commisions – get in touch via <a href="mailto:mac@retro.codes" className="underline">robin.sk@hotmail.no</a></p>
-          </div>
+          
         </div>
       </section>
 
